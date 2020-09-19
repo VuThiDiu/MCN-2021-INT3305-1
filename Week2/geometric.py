@@ -8,8 +8,7 @@ def infoMeasure(n, p):
 
 def sumProb(N, p):
     '''
-    sumProb có thể kiểm chứng tổng xác suất của phân bố geometric bằng 1.
-
+    Tổng phân bố 
     '''
     total=  0;
     for item in range(1,N+1):
@@ -18,8 +17,9 @@ def sumProb(N, p):
 
 def approxEntropy(N, p):
     '''
-    Hàm approxEntropy  tính xấp xỉ  Entropy của nguồn tin geometric.
-    Ta có : 
+    Entropy = E(p(x)*l(x)) = -E(p(x)*log(px))
+    Mà: approxEntropy = E(prob(x)*infoMeasure(x))
+                      = -E(p(x)*log(px))
     '''
     sum = 0;
     for  i  in range(1, N+1):
